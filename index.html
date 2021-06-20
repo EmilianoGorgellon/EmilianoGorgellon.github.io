@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- link font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div>
+                <a href="#home" class="header-title" id="header-title"></a><span class="header-title-span"> dev /></span>
+            </div>
+            <div class="icon-menu" id="icon-menu">
+                <i class="fas fa-bars"></i>
+            </div>  
+        </div>
+        <nav>
+            <ul class="menu" id="main-menu">
+                <li class="menu--item"><a class="menu--item-link" href="#home">Home</a></li>
+                <li class="menu--item"><a class="menu--item-link" href="#proyects">Proyectos</a></li>
+                <li class="menu--item"><a class="menu--item-link" href="#aboutMe">About me</a></li>
+                <li class="menu--item"><a class="menu--item-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main" id="home">
+        <!-- profile -->
+        <div class="container--profile">
+            <div>
+                <h1 class="profile-title">
+                    SOY EMILIANO <br>
+                <span class="title-span" id="title-span"></span><br>
+                    GORGELLON
+                </h1>
+               
+            </div>
+            <img class="profile-img" src="/assets/images/portafolio-2.png" alt="portafolio-1">
+        </div>
+        <!-- my proyects -->
+        <section class="main--container-proyect" id="proyects">
+            <h1 class="container-proyect-title">Proyectos</h1>
+            <div class="container-proyects" id="proyectos">
+                <article class="proyects proyect-1" id="clima"></article>
+                <article class="proyects proyect-2" id="paises"></article>
+                <article class="proyects proyect-3" id="cuentaRegresiva"></article>
+                <article class="proyects proyect-4" id="cuentaA"></article>
+            </div>
+        </section>
+        <!-- About me -->
+        <section class="main--container-about" id="aboutMe">
+            <h2 class="about-title">About me</h2>
+            <div class="container--about-me">
+                <div class="about-me-description">
+                    <h1>Quien soy?</h1>
+                    <h4>Me llamo Emiliano Gorgellon, tengo 20 años y soy de Argentina. 
+                        <br>
+                        <br>
+                        Inicie en el mundo del desarrollo web en febrero del 2021 con un curso de ItMaster full stack y siendo autodidacta con algunos cursos de youtube. Practique con proyectos personales del curso y otros desde la pagina <a class="about-me-link" href="https://www.frontendmentor.io/challenges" target="_blank">Front End Mentor</a>
+                        <br>
+                        A pesar de haber hecho un curso full stack como no practique mucho la parte de back end, me siento mas comodo siendo front end developer.</h4>
+                        <a class="link-cv" href="#"><i class="fas fa-file-download"> Descarga CV</i></a>
+                </div>
+                
+                <div class="about-me-skills" id="skills">
+                    <h4 class="about-me-skills-title">Mis principales habilidades</h4>
+                    <i class="fab fa-html5 html" id="html"></i>
+                    <i class="fab fa-css3-alt css" id="css"></i>
+                    <i class="fab fa-js-square js" id="js"></i>
+                    <i class="fab fa-react react" id="react"></i>
+                    <i class="fab fa-sass sass" id="sass"></i>
+                    <i class="fab fa-node node" id="node"></i>
+                    <i class="fab fa-bootstrap bootstrap" id="bootstrap"></i>
+                    <i class="fab fa-github github" id="github"></i>
+                    <i class="fab fa-git-alt git" id="git"></i>
+                    <div class="container-skill-img" id="mongo">
+                        <img src="http://assets.stickpng.com/thumbs/58481021cef1014c0b5e494b.png" alt="mongodb">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container--contact" id="contact">
+            <h4 class="contact-title">Contact</h4>
+            <!-- <input class="contact-name" type="text" placeholder="Name...">
+            <input class="contact-email" type="email" placeholder="Email...">
+            <textarea class="contact-mensaje" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea> -->
+            <div class="contact-icon">
+                <a href="https://www.instagram.com/emigorgellon/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/emiliano-gorgellon-6212331a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/EmilianoGorgellon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+    </main>
+     <!-- Scroll reveal -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- script js -->
+    <script src="/js/script.js"></script>
+   
+    <!-- script font awesome -->
+    <script src="https://kit.fontawesome.com/963c0f236f.js" crossorigin="anonymous"></script>
+</body>
+</html>
