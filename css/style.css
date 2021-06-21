@@ -220,7 +220,6 @@ body {
 .proyects {
     width: 100%;
     height: var(--height-mobile);
-    background-color: hotpink;
     border-radius: 12px;
 }
 @media screen and (min-width: 768px){
@@ -435,7 +434,7 @@ body {
     color: #3C873A;
 }
 .bootstrap:hover {
-    color: hotpink;
+    color: #CD6799;
 }
 .github:hover {
     color: #211F1F;
