@@ -235,12 +235,14 @@ body {
 .proyect-1 {
     background-image: url("/assets/images/proyecto-1.PNG");
 }
-
 .proyect-2 {
     background-image: url("/assets/images/proyecto-2.PNG");
 }
 .proyect-3 {
     background-image: url("/assets/images/proyecto-3.PNG");
+}
+.proyect-4 {
+    background-image: url("/assets/images/proyecto-4.PNG");
 }
 /* Estilos del insert adjacement que contiene la info del proyecto */
 .container--information-proyect {
@@ -451,9 +453,9 @@ body {
 }
 .text-skill-mongo {
     background-color: rgb(170, 164, 164);
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
     border-radius: 12px;
 
 }
@@ -469,7 +471,7 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    top: -210px;
+    top: -180px;
     height: 40vh;
     background-image: url("/assets/images/wave-reverse.png");
     background-repeat: no-repeat;

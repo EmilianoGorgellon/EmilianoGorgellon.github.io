@@ -8,15 +8,18 @@ const headerTitle = document.getElementById("header-title");
 headerTitle.textContent = "< Emi "
 titleSpan.textContent = "<FRONT END DEVELOPER />";
 
+ScrollReveal().reveal('.container-proyects')
+ScrollReveal().reveal('.about-me-description', {delay:200})
+ScrollReveal().reveal('.about-me-skills', {delay:400})
 
 iconMenu.addEventListener('click', () => {
     mainMenu.classList.toggle("menu--show")
 })
 const descriptionProyect = [
-    {"title":"App clima", "description":"Una app del clima","icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"] , "id":"clima", "link": "fab fa-github", "page": "fas fa-globe-americas"}, 
-    {"title":"App Paises", "description": "Una app con muchos paises y con theme", "icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"], "id": "paises", "link": "fab fa-github", "page": "fas fa-globe-americas"}, 
-    {"title":"Cuenta Regresiva", "description": "Cuenta regresiva de mi cumpleaños", "icon": ["fab fa-js-square", "fab fa-css3-alt", "fab fa-html5"], "id": "cuentaRegresiva", "link": "fab fa-github", "page": "fas fa-globe-americas"}, 
-    {"title":"Cuenta Regresiva", "description": "Cuenta regresiva de mi cumpleaños", "icon": ["fab fa-js-square", "fab fa-css3-alt", "fab fa-html5"], "id": "cuentaA", "link": "fab fa-github", "page": "fas fa-globe-americas"}
+    {"title":"App clima", "description":"Una app del clima","icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"] , "id":"clima", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/App-clima", "linkPage":"https://react-app-clima.herokuapp.com/"}, 
+    {"title":"App Paises", "description": "Una app con muchos paises y con theme", "icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"], "id": "paises", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-paises", "linkPage":"https://app-paises.herokuapp.com/"}, 
+    {"title":"Cuenta Regresiva", "description": "Cuenta regresiva de mi cumpleaños", "icon": ["fab fa-js-square", "fab fa-css3-alt", "fab fa-html5"], "id": "cuentaRegresiva", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/Cuenta-regresiva", "linkPage":"#"}, 
+    {"title": "Juego lagarto spock", "description":"Juego piedra-papel-tijera-lagarto-spock", "icon":["fab fa-react", "fab fa-sass", "fab fa-html5"], "id":"juego", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-game-lagarto-spock", "linkPage":"https://app-lagarto-spock.herokuapp.com/"}
 ]
 const textSkill = [
     {"id":"html", "text":"HTML5"},
@@ -44,9 +47,8 @@ const rellenar = (e) => {
                         ${iconosSinComas}
                     </div>
                     <div class="container--information-links">
-                       
-                        <a href="#" class="link-github"><i class="${datos.link}"></i> Github</a>
-                        <a href="#" class="link-page"><i class="${datos.page}"></i> Visitar sitio web</a>
+                        <a href="${datos.linkGithub}" class="link-github" target="_blank" ><i class="${datos.iconGithub}"></i> Github</a>
+                        <a href="${datos.linkPage}" class="link-page" target="_blank" ><i class="${datos.page}"></i> Visitar sitio web</a>
                     </div>
                 </div>`)            
             break
@@ -86,9 +88,3 @@ skills.forEach((skill) => {
 
 mongo.addEventListener('mouseenter', skillMongo)
 mongo.addEventListener('mouseleave', () => document.getElementById(`mongo`).removeChild(deleteMongo));
-
-
-ScrollReveal().reveal('.container--profile',);
-ScrollReveal().reveal('.container-proyects', {delay:300})
-ScrollReveal().reveal('.about-me-description', {delay:200})
-ScrollReveal().reveal('.about-me-skills', {delay:400})
