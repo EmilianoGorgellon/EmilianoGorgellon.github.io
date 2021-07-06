@@ -243,6 +243,9 @@ body {
 .proyect-4 {
     background-image: url("/assets/images/proyecto-4.PNG");
 }
+.proyect-5 {
+    background-image: url("/assets/images/proyecto-5.PNG");
+}
 /* Estilos del insert adjacement que contiene la info del proyecto */
 .container--information-proyect {
     margin: 0;
