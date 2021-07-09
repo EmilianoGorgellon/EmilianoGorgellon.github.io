@@ -1,7 +1,6 @@
 :root {
     --white: #FFFFFF;
     --white-grey: #EAEAEA;
-    /* --blue: #2196f3; */
     --blue: #7289da;
     --dark-blue: #2c2f33;
     --grey: #2c2f33;
@@ -80,7 +79,6 @@ body {
 }
 .menu--item {
     text-align: center;
-    /* border-bottom: 1px solid var(--white-grey); */
 }
 @media screen and (min-width: 768px) {
     .menu--item {
