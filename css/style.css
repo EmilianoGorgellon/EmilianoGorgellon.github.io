@@ -225,7 +225,7 @@ body {
         height: var(--height-desktop);
     }
 }
-.proyect-1, .proyect-2, .proyect-3, .proyect-4 {
+.proyect-1, .proyect-2, .proyect-3, .proyect-4, .proyect-5, .proyect-6 {
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -243,6 +243,9 @@ body {
 }
 .proyect-5 {
     background-image: url("/assets/images/proyecto-5.PNG");
+}
+.proyect-6 {
+    background-image: url("/assets/images/proyecto-6.PNG");
 }
 /* Estilos del insert adjacement que contiene la info del proyecto */
 .container--information-proyect {
