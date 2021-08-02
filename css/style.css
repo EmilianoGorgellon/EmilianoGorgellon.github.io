@@ -402,14 +402,15 @@ body {
     background-color: rgb(170, 164, 164);
     border-radius: 12px;
 }
-.container-skill-img img {
-    object-fit: cover;
-    width: 50%;
-    height: 55px;
-    text-align: center;
-    background-color: rgb(170, 164, 164);
-    border-radius: 12px;
-    
+.express-img {
+    object-fit: contain;
+    margin-top: 10px;
+    width: 80px;
+}
+@media screen and (min-width: 768px) {
+    .express-img {
+        width: 100px;
+    }
 }
 .about-me-skills i {
     font-size: 48px;
@@ -454,7 +455,7 @@ body {
     padding-bottom: 10px;
     border-radius: 12px;
 }
-.text-skill-mongo {
+.text-skill-express {
     background-color: rgb(170, 164, 164);
     font-size: 20px;
     margin: 0;

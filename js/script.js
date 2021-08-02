@@ -2,7 +2,7 @@ const iconMenu = document.getElementById("icon-menu");
 const mainMenu = document.getElementById("main-menu");
 const articles = document.querySelectorAll('#proyectos article');
 const skills = document.querySelectorAll('#skills i');
-const mongo = document.getElementById("mongo");
+const express = document.getElementById("express");
 const titleSpan = document.getElementById("title-span");
 const headerTitle = document.getElementById("header-title");
 headerTitle.textContent = "< Emi "
@@ -33,7 +33,7 @@ const textSkill = [
     {"id":"bootstrap", "text": "Bootstrap"},
     {"id":"github", "text":"Github"},
     {"id":"git", "text":"Git"},
-    {"id":"mongo", "text":"MongoDB"}
+    {"id":"express", "text":"Express.js"}
 ]
 
 const rellenar = (e) => {
@@ -71,7 +71,7 @@ const skillMongo = (e) => {
     for (datos of textSkill){
         if (e.target.id === datos.id){
             document.getElementById(`${datos.id}`).insertAdjacentHTML('beforeend', 
-                `<h5 class="text-skill-mongo" id="deleteMongo">${datos.text}</h5>`
+                `<h5 class="text-skill-express" id="deleteMongo">${datos.text}</h5>`
             )
         }
     }   
@@ -88,5 +88,5 @@ skills.forEach((skill) => {
     skill.addEventListener('mouseleave', (e) => document.getElementById(`${e.target.id}`).innerHTML = "");
 })
 
-mongo.addEventListener('mouseenter', skillMongo)
-mongo.addEventListener('mouseleave', () => document.getElementById(`mongo`).removeChild(deleteMongo));
+express.addEventListener('mouseenter', skillMongo)
+express.addEventListener('mouseleave', () => document.getElementById(`express`).removeChild(deleteMongo));
