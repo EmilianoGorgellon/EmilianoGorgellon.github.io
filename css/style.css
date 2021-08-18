@@ -402,16 +402,7 @@ body {
     background-color: rgb(170, 164, 164);
     border-radius: 12px;
 }
-.express-img {
-    object-fit: contain;
-    margin-top: 10px;
-    width: 80px;
-}
-@media screen and (min-width: 768px) {
-    .express-img {
-        width: 100px;
-    }
-}
+
 .about-me-skills i {
     font-size: 48px;
     padding: 20px 10px;
@@ -455,14 +446,34 @@ body {
     padding-bottom: 10px;
     border-radius: 12px;
 }
-.text-skill-express {
+.express-img {
+    object-fit: contain;
+    margin-top: 10px;
+    width: 80px;
+}
+@media screen and (min-width: 768px) {
+    .express-img {
+        width: 100px;
+    }
+}
+.text-skill-express, .text-skill-mongodb {
     background-color: rgb(170, 164, 164);
     font-size: 20px;
-    margin: 0;
     padding-bottom: 10px;
     border-radius: 12px;
-
 }
+.text-skill-express {
+    margin: 0;
+}
+.text-skill-mongodb {
+    margin-top: -40px;
+}
+.mongodb-img {
+    object-fit: contain;
+    margin-top: -20px;
+    width: 120px;
+}
+
 /* Style contact */
 .container--contact {
     display: block;
