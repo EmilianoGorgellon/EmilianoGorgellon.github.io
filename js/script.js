@@ -6,12 +6,22 @@ const express = document.getElementById("express");
 const mongo = document.getElementById("mongodb");
 const titleSpan = document.getElementById("title-span");
 const headerTitle = document.getElementById("header-title");
-headerTitle.textContent = "< Emi "
+headerTitle.textContent = "< Emi ";
 titleSpan.textContent = "<FRONT END DEVELOPER />";
-
-ScrollReveal().reveal('.container-proyects')
-ScrollReveal().reveal('.about-me-description', {delay:200})
-ScrollReveal().reveal('.about-me-skills', {delay:400})
+// scroll Reveal configuration
+    window.sr = ScrollReveal()
+    const revealAnimation = (name, direction, number) => {
+        sr.reveal(name, {
+            duration: 3000,
+            origin: direction,
+            distance: number,
+        })
+    }
+    revealAnimation('.header', 'bottom', '-100px');
+    revealAnimation('.profile-img', 'top', '250px');
+    revealAnimation('.profile-title', 'top', '250px');
+    revealAnimation('.container-proyects', 'left', '1000px');
+    revealAnimation('.container--about-me', 'bottom', '500px');
 
 iconMenu.addEventListener('click', () => {
     mainMenu.classList.toggle("menu--show")
