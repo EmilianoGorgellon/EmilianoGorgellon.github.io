@@ -22,6 +22,49 @@ titleSpan.textContent = "<FRONT END DEVELOPER />";
     revealAnimation('.profile-title', 'top', '250px');
     revealAnimation('.container-proyects', 'left', '1000px');
     revealAnimation('.container--about-me', 'bottom', '500px');
+// animation scroll navbar
+if (window.innerWidth > 768) {
+    const allMenuItem = document.querySelectorAll(".menu--item-link");
+    window.addEventListener('scroll', () => {
+        const windowHeigth = window.scrollY;
+        allMenuItem.forEach((element,i) => {
+            if (windowHeigth === 0 || windowHeigth > 0 && windowHeigth < 475) {
+                i === 0 ? (
+                    allMenuItem[i].style.backgroundColor ="#2c2f33",
+                    allMenuItem[i].style.transform = "scale(1.1)"
+                ) : (
+                    allMenuItem[i].style.backgroundColor ="#7289da",
+                    allMenuItem[i].style.transform = "scale(1)"
+                )
+            } else if (windowHeigth > 475 && windowHeigth < 2000) {
+                i === 1 ? (
+                    allMenuItem[i].style.backgroundColor ="#2c2f33",
+                    allMenuItem[i].style.transform = "scale(1.1)"
+                ) : (
+                    allMenuItem[i].style.backgroundColor ="#7289da",
+                    allMenuItem[i].style.transform = "scale(1)"
+                )
+            } else if (windowHeigth > 2000 && windowHeigth < 3075) {
+                i === 2 ? (
+                    allMenuItem[i].style.backgroundColor ="#2c2f33",
+                    allMenuItem[i].style.transform = "scale(1.1)"
+                ) : (
+                    allMenuItem[i].style.backgroundColor ="#7289da",
+                    allMenuItem[i].style.transform = "scale(1)"
+                )
+            } else {
+                i === 3 ? (
+                    allMenuItem[i].style.backgroundColor = "#2c2f33",
+                    allMenuItem[i].style.transform = "scale(1.1)"
+                ) : (
+                    allMenuItem[i].style.backgroundColor ="#7289da",
+                    allMenuItem[i].style.transform = "scale(1)"
+                )
+            }
+        })
+    }) 
+}
+
 
 iconMenu.addEventListener('click', () => {
     mainMenu.classList.toggle("menu--show")
