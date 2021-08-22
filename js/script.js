@@ -44,7 +44,7 @@ if (window.innerWidth > 768) {
                     allMenuItem[i].style.backgroundColor ="#7289da",
                     allMenuItem[i].style.transform = "scale(1)"
                 )
-            } else if (windowHeigth > 2000 && windowHeigth < 3075) {
+            } else if (windowHeigth >= 2000 && windowHeigth < 3075) {
                 i === 2 ? (
                     allMenuItem[i].style.backgroundColor ="#2c2f33",
                     allMenuItem[i].style.transform = "scale(1.1)"
