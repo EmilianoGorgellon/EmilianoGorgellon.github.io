@@ -4,6 +4,7 @@
     --blue: #7289da;
     --dark-blue: #2c2f33;
     --grey: #2c2f33;
+    --ligth-grey: #cdd1d4;
     --height-mobile: 250px;
     --height-desktop: 400px;
 }
@@ -394,14 +395,15 @@ body {
     width: 100%;
     height: 85px;
     text-align: center;
-    background-color: rgb(170, 164, 164);
+    background-color: var(--ligth-grey);
     border-radius: 12px;
 }
 .about-me-skills i {
     font-size: 48px;
     padding: 20px 10px;
     text-align: center;
-    background-color: rgb(170, 164, 164);
+    background-color: var(--ligth-grey);
+    color: var(--dark-blue);
     border-radius: 12px;
     transition: color .6s;
 }
@@ -433,41 +435,44 @@ body {
     color: #F1502F
 }
 .text-skill {
-    background-color: rgb(170, 164, 164);
+    background-color: var(--ligth-grey);
+    color: var(--dark-blue);
     font-size: 25px;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 12px;
 }
-.express-img {
-    object-fit: contain;
-    margin-top: 10px;
-    width: 80px;
-}
-@media screen and (min-width: 768px) {
-    .express-img {
-        width: 100px;
-    }
-}
-.text-skill-express, .text-skill-mongodb {
-    background-color: rgb(170, 164, 164);
-    font-size: 20px;
-    padding-bottom: 10px;
-    border-radius: 12px;
-}
-.text-skill-express {
-    margin: 0;
-}
-.text-skill-mongodb {
-    margin-top: -40px;
-}
-.mongodb-img {
-    object-fit: contain;
-    margin-top: -20px;
-    width: 120px;
-}
 
+.text-skill-icon {
+    background-color: var(--ligth-grey);
+    color: var(--dark-blue);
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 8px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.icon-express {
+    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    color: var(--dark-blue);
+}
+.icon-mongodb {
+    object-fit: cover;
+    width: 150px;
+    height: 35px;
+    margin-top: 20px;
+}
+.icon-redux {
+    object-fit: cover;
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    color: var(--dark-blue);
+}
 /* Style contact */
 .container--contact {
     display: block;

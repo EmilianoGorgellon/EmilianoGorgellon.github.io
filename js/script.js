@@ -4,6 +4,7 @@ const articles = document.querySelectorAll('#proyectos article');
 const skills = document.querySelectorAll('#skills i');
 const express = document.getElementById("express");
 const mongo = document.getElementById("mongodb");
+const redux = document.getElementById("redux");
 const titleSpan = document.getElementById("title-span");
 const headerTitle = document.getElementById("header-title");
 headerTitle.textContent = "< Emi ";
@@ -88,7 +89,8 @@ const textSkill = [
     {"id":"github", "text":"Github"},
     {"id":"git", "text":"Git"},
     {"id":"express", "text":"Express.js"}, 
-    {"id":"mongodb", "text":"MongoDB"}
+    {"id":"mongodb", "text":"MongoDB"},
+    {"id":"redux", "text": "Redux"}
 ]
 
 const rellenar = (e) => {
@@ -126,7 +128,7 @@ const skillExpress = (e) => {
     for (datos of textSkill){
         if (e.target.id === datos.id){
             document.getElementById(`${datos.id}`).insertAdjacentHTML('beforeend', 
-                `<h5 class="text-skill-express" id="deleteExpress">${datos.text}</h5>`
+                `<h5 class="text-skill-icon" id="deleteExpress">${datos.text}</h5>`
             )
         }
     }   
@@ -135,7 +137,15 @@ const skillMongo = (e) => {
     for (datos of textSkill) {
         if (e.target.id === datos.id) {
             document.getElementById(`${datos.id}`).insertAdjacentHTML('beforeend', 
-                `<h5 class="text-skill-mongodb" id="deleteMongodb">${datos.text}</h5>`)
+                `<h5 class="text-skill-icon" id="deleteMongodb">${datos.text}</h5>`)
+        }
+    }
+}
+const skillRedux = (e) => {
+    for (datos of textSkill){
+        if (e.target.id === datos.id) {
+            document.getElementById(`${datos.id}`).insertAdjacentHTML('beforeend', 
+            `<h5 class="text-skill-icon" id="deleteRedux">${datos.text}</h5>`)
         }
     }
 }
@@ -154,3 +164,5 @@ express.addEventListener('mouseenter', skillExpress)
 express.addEventListener('mouseleave', () => document.getElementById(`express`).removeChild(deleteExpress));
 mongo.addEventListener('mouseenter', skillMongo);
 mongo.addEventListener('mouseleave', () => document.getElementById("mongodb").removeChild(deleteMongodb))
+redux.addEventListener('mouseenter', skillRedux);
+redux.addEventListener('mouseleave', () => document.getElementById('redux').removeChild(deleteRedux))
