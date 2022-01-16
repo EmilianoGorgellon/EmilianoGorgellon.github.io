@@ -71,12 +71,12 @@ iconMenu.addEventListener('click', () => {
     mainMenu.classList.toggle("menu--show")
 })
 const descriptionProyect = [
-    {"title":"App paises", "description":"Una app de paises ","icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"] , "id":"paises", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-paises", "linkPage":"https://react-paises-app.herokuapp.com/"}, 
-    {"title":"App Alkemy Hero", "description": "Una app con muchos heroes y villanos.<br/> Email: challenge@alkemy.org <br/> Password: react", "icon": ["fab fa-react", "fab fa-css3-alt", "fab fa-html5"], "id": "alkemy", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/alkemyChallenge", "linkPage":"https://alkemy-react-hero.herokuapp.com/"}, 
-    {"title":"Cuenta Regresiva", "description": "Cuenta regresiva hacia mi cumpleaños", "icon": ["fab fa-js-square", "fab fa-css3-alt", "fab fa-html5"], "id": "cuentaRegresiva", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/Cuenta-regresiva", "linkPage":"https://emilianogorgellon.github.io/cuenta-regresiva/"}, 
-    {"title": "Juego lagarto spock", "description":"Juego piedra-papel-tijera-lagarto-spock", "icon":["fab fa-react", "fab fa-sass", "fab fa-html5"], "id":"juego", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-game-lagarto-spock", "linkPage":"https://app-lagarto-spock.herokuapp.com/"}, 
-    {"title":"E-commerce", "description":"E-commerce con buscador, categorias y carrito.", "icon":["fab fa-html5","fab fa-node-js", "fab fa-css3-alt","fab fa-js-square"], "id":"productos", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub": "https://github.com/EmilianoGorgellon/proyecto-productos", "linkPage": "https://node-proyecto-productos.herokuapp.com/"}, 
-    {"title":"mapa con direccion IP", "description":"Mapa con geolocalizacion del usuario e direccion IP", "icon":["fab fa-html5","fab fa-node-js", "fab fa-css3-alt","fab fa-js-square"], "id":"map", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub": "https://github.com/EmilianoGorgellon/googleMaps-ip", "linkPage": "https://ip-adress-map.herokuapp.com/"}
+    {"title":"App paises", "description":"Una app de paises ","icon": ["fab fa-react", "fab fa-sass", "fab fa-html5"] , "id":"paises", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-paises", "linkPage":"https://react-paises-app.herokuapp.com/", "id_index": 1}, 
+    {"title":"App Alkemy Hero", "description": "Una app con muchos heroes y villanos.<br/> Email: challenge@alkemy.org <br/> Password: react", "icon": ["fab fa-react", "fab fa-css3-alt", "fab fa-html5"], "id": "alkemy", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/alkemyChallenge", "linkPage":"https://alkemy-react-hero.herokuapp.com/", "id_index": 2}, 
+    {"title":"Cuenta Regresiva", "description": "Cuenta regresiva hacia mi cumpleaños", "icon": ["fab fa-js-square", "fab fa-css3-alt", "fab fa-html5"], "id": "cuentaRegresiva", "iconGithub": "fab fa-github", "page": "fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/Cuenta-regresiva", "linkPage":"https://emilianogorgellon.github.io/cuenta-regresiva/", "id_index": 3}, 
+    {"title": "Juego lagarto spock", "description":"Juego piedra-papel-tijera-lagarto-spock", "icon":["fab fa-react", "fab fa-sass", "fab fa-html5"], "id":"juego", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub":"https://github.com/EmilianoGorgellon/app-game-lagarto-spock", "linkPage":"https://app-lagarto-spock.herokuapp.com/", "id_index": 4}, 
+    {"title":"E-commerce", "description":"E-commerce con buscador, categorias y carrito.", "icon":["fab fa-html5","fab fa-node-js", "fab fa-css3-alt","fab fa-js-square"], "id":"productos", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub": "https://github.com/EmilianoGorgellon/proyecto-productos", "linkPage": "https://node-proyecto-productos.herokuapp.com/", "id_index": 5}, 
+    {"title":"mapa con direccion IP", "description":"Mapa con geolocalizacion del usuario e direccion IP", "icon":["fab fa-html5","fab fa-node-js", "fab fa-css3-alt","fab fa-js-square"], "id":"map", "iconGithub":"fab fa-github", "page":"fas fa-globe-americas", "linkGithub": "https://github.com/EmilianoGorgellon/googleMaps-ip", "linkPage": "https://ip-adress-map.herokuapp.com/", "id_index": 6}
 ]
 const textSkill = [
     {"id":"html", "text":"HTML5"},
@@ -115,6 +115,37 @@ const rellenar = (e) => {
     }
 }
 
+const verProyectosCelulares = (e) => {
+    let index = 0;
+    for (datos of descriptionProyect){
+        index++;
+        let iconos = datos.icon.map((dato) => `<i class="${dato} icon"></i>`);
+        let iconosSinComas = iconos.join("");
+        console.log("aca paso")
+        if (datos.id_index === index) {
+            console.log("COINCIDE")
+            document.getElementById(`${datos.id}`).insertAdjacentHTML('afterbegin', 
+                `<div class="container--information-proyect">
+                    <h3 class="information--title">${datos.title} </h3>
+                    <p class="information--description">${datos.description}</p>
+                    <div class="container-icon">
+                        ${iconosSinComas}
+                    </div>
+                    <div class="container--information-links">
+                        <a href="${datos.linkGithub}" class="link-github" target="_blank" ><i class="${datos.iconGithub}"></i> Github</a>
+                        <a href="${datos.linkPage}" class="link-page" target="_blank" ><i class="${datos.page}"></i> Visitar sitio web</a>
+                    </div>
+                </div>`)
+        }
+    }
+}
+
+if (window.innerWidth < 768) {
+    (async () => {
+        verProyectosCelulares()
+    })()
+}
+
 const skillText = (e) => {
     for (datos of textSkill){
         if (e.target.id === datos.id){
@@ -150,9 +181,10 @@ const skillRedux = (e) => {
     }
 }
 articles.forEach((article) => {
-    article.addEventListener('mouseenter', rellenar)
-    article.addEventListener('mouseleave', (e) => document.getElementById(`${e.target.id}`).innerHTML = "");
-
+    if (window.innerWidth > 768) {
+        article.addEventListener('mouseenter', rellenar)
+        article.addEventListener('mouseleave', (e) => document.getElementById(`${e.target.id}`).innerHTML = "");
+    }
 })
 
 skills.forEach((skill) => {
