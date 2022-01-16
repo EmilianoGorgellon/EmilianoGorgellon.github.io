@@ -121,9 +121,7 @@ const verProyectosCelulares = (e) => {
         index++;
         let iconos = datos.icon.map((dato) => `<i class="${dato} icon"></i>`);
         let iconosSinComas = iconos.join("");
-        console.log("aca paso")
         if (datos.id_index === index) {
-            console.log("COINCIDE")
             document.getElementById(`${datos.id}`).insertAdjacentHTML('afterbegin', 
                 `<div class="container--information-proyect">
                     <h3 class="information--title">${datos.title} </h3>
