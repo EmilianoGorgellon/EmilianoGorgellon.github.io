@@ -8,7 +8,7 @@ const redux = document.getElementById("redux");
 const titleSpan = document.getElementById("title-span");
 const headerTitle = document.getElementById("header-title");
 headerTitle.textContent = "< Emi ";
-titleSpan.textContent = "<FRONT END DEVELOPER />";
+titleSpan.textContent = "<FULL STACK DEVELOPER />";
 // scroll Reveal configuration
     window.sr = ScrollReveal()
     const revealAnimation = (name, direction, number) => {
